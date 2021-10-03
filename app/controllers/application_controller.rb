@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
    session[:name]
   end
 
+  private
+  def require_login
+    redirect_to new_session_path if !current_user
+  end
+
 end

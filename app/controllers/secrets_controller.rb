@@ -1,7 +1,5 @@
 class SecretsController < ApplicationController
-    # before_action ...
-
+    before_action :require_login
     def show
-        byebug
     end
 end
